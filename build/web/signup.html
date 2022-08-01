@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Signup</title>
+        <link rel="icon" href="./image/lg.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="signup.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+        <a href="index.html" class="logo">RentalBook</a>
+
+        <div class="nav-links" id="navLinks">
+            <i id="times" class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html"><span style="color: #0088a9" class="fa fa-home"></span> Home</a></li>
+                <!--<li><a href="signup.html"><span style="color: #0088a9" class="fa fa-user"></span> Sign Up</a></li>-->
+                <li><a href="login.html"><span style="color: #0088a9" class="fa fa-sign-in"></span> Log In</a></li>
+                <li><a class="abc" href="#contact"><button type="submit" name="Button" class="bt">Contact
+                            Us</button></a>
+                </li>
+<!--                <li>
+                    <div class="search-box">
+                        <input class="search-text" type="search" name="Search" placeholder="Search...">
+                        <a class="search-btn" href="#">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <i id="bars" class="fa fa-bars" onclick="showMenu()"></i>
+    </header>
+        
+        <div class="signup">
+            <div class="key-note">
+                <center>
+                    <h1 class="x"><u>Sign Up Here</u></h1>
+                    
+                    <form name="myForm" action="signup" method="get" onsubmit="return validateForm()">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input type="text" name="fname" placeholder="Full Name..." required></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type="text" name="em" placeholder="Email..." required></td>
+                            </tr>
+                            <tr>
+                                <td>ID Proof:</td>
+                                <td><input type="number" name="adh" placeholder="Aadhaar ID..." required></td>
+                            </tr>
+                            <tr>
+                                <td>Contact:</td>
+                                <td><input type="number" name="cont" placeholder="Contact No..."></td>
+                            </tr>
+                            <tr>
+                                <td>Gender:</td>
+                                <td>
+                                    <input type="text" name="gen" placeholder="Type Here...">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password:</td>
+                                <td><input type="password" id="password" name="pass" placeholder="Password..." required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Confirm Password:</td>
+                                <td><input type="password" id="confirm_password" name="cpass" placeholder="Confirm pass..."
+                                           required></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" style="text-align: center">
+                                    <a href="login.html">
+                                        <button type="button" name="Button" class="bts">Submit</button>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <section>
+                            <h2><b> Or Continue with</b></h2>
+                            <div class="col">
+                                <a href="#" class="fb btn">
+                                    <i class="fa fa-facebook" style="font-size: 20px; color: #066bf9;"></i>
+                                </a>
+                                <a href=" #" class="twitter btn">
+                                    <i class="fa fa-twitter fa-fw" style="font-size: 20px; color: #06ccf9;"></i>
+                                </a>
+                                <a href=" #" class="google btn">
+                                    <i class="fa fa-google" style="font-size: 20px; color: #ce1919;"></i>
+                                </a>
+                            </div>
+                        </section>
+                    </form>
+                </center>
+            </div>
+        </div>
+        <!-- JavaScript for toggle Menu -->
+        <script>
+
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0";
+            }
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+//                navLinks.style.display = "none";
+            }
+
+        </script>
+        <!--JavaScript for password-->
+        <script>
+            var password = document.getElementById("password"),
+                    confirm_password = document.getElementById("confirm_password");
+
+            function validatePassword() {
+                if (password.value !== confirm_password.value) {
+                    confirm_password.setCustomValidity("Passwords Don't Match");
+                } else {
+                    confirm_password.setCustomValidity('');
+                }
+            }
+            password.onchange = validatePassword;
+            confirm_password.onkeyup = validatePassword;
+        </script>
+
+       <footer>
+        <p> #Organized by <b>Abhiraj, Ashish, Bajrang, Raushan (Kumar)</b>#<br>
+            <a href="#">Rental@Book.com</a> &emsp; Contact On - 1234567890
+        </p>
+    </footer>
+    </body>
+
+</html>

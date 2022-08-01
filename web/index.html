@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentalBook</title>
+    <link rel="icon" href="./image/lg.jpg" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">RentalBook</a>
+
+        <div class="nav-links" id="navLinks">
+            <i id="times" class="fa fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="#myTopnav"><span style="color: #0088a9" class="fa fa-home"></span> Home</a></li>
+                <li><a href="signup.html"><span style="color: #0088a9" class="fa fa-user"></span> Sign Up</a></li>
+                <li><a href="login.html"><span style="color: #0088a9" class="fa fa-sign-in"></span> Log In</a></li>
+                <li><a class="abc" href="#contact"><button type="submit" name="Button" class="bt">Contact
+                            Us</button></a>
+                </li>
+                
+<!--                <li>
+                    <div class="search-box">
+                        <input class="search-text" type="search" name="Search" placeholder="Search...">
+                        <a class="search-btn" href="#">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+        <button type="button" class="user"><a href="#"><i class="fa fa-user" style="font-size:28px"></i></a></button>
+        <i id="bars" class="fa fa-bars" onclick="showMenu()"></i>
+    </header>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+    </script>
+
+    <!-- JavaScript for toggle Menu -->
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+    </script>
+
+    <div class="animation">
+        <div class="carousel">
+            <div class="key-note">
+                <h1>There is no friends as loyal as a Book.</h1>
+                <p>“A room without books is like a body without a soul.” — <b>Cicero</b>.</p>
+                <a href="#about" class="key-button">About Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="header-2">
+        <center>
+            <div class="option">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <button type="button" name="Button" class="obt">
+                                Give On<br>Rent</button>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="main.html">
+                            <button type="button" name="Button" class="obt">
+                                Take On<br>Rent</button>
+                        </a>
+                    </li>
+                </ul>
+        </center>
+    </div>
+
+    <div class="topnav" id="myTopnav">
+        <div class="dropdown">
+            <button class="dropbtn">Engineering
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">CSE</a>
+                <a href="#">AI</a>
+                <a href="#">ME</a>
+                <a href="#">ELE</a>
+                <a href="#">CIVIL</a>
+                <a href="#">Automobile</a>
+                <a href="#">Agriculture</a>
+                <a href="#">Others</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Medical
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">MBBS</a>
+                <a href="#">BDS</a>
+                <a href="#">BAMS</a>
+                <a href="#">BUMS</a>
+                <a href="#">BHMS</a>
+                <a href="#">BYNS</a>
+                <a href="#">Others</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Middle/Higher Edu.
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">10th</a>
+                <a href="#">12th</a>
+                <a href="#">B.Sc</a>
+                <a href="#">M.Sc</a>
+                <a href="#">B.Ad</a> <a href="#">B.com</a>
+                <a href="#">Others</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Competitive
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">UPSC</a>
+                <a href="#">State PSC</a>
+                <a href="#">Railway</a>
+                <a href="#">NTPC</a>
+                <a href="#">Army/Airforce</a>
+                <a href="#">Others</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Others
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Magzine</a>
+                <a href="#">News Papers</a>
+                <a href="#">Story Books</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+    <section class="menu" id="menu">
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="image/4.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/11.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/22.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+
+            <div class="box">
+                <img src="image/33.jpg" alt="">
+                <h3>tasty and healty</h3>
+                <div class="price">02.00/day <span>03.00</span></div>
+                <a href=""><button type="button" name="Button">Shop Now</button></a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="about-us" id="about">
+            <div class="about-section">
+                <h1>About the RentalBook</h1><br>
+                <p>The purpose of this RentalBook platform is clear by his title.<br>
+                    We are going to provide the Books on rent to Student.</p><br><br>
+            </div>
+        </section>
+        <section class="contact-us" id="contact">
+            <div class="contact-section">
+                <h1>Contact US</h1><br>
+                <p>You can contact on.</p><br>
+                <p><b>Email:</b> <a href="#">rentalbook4@gmail.com</a></p>
+                <p><b>Phone:</b> 1234567890</p>
+            </div>
+        </section>
+        <p> #Organized by <b>Abhiraj, Ashish, Bajrang, Raushan (Kumar)</b>#<br>
+            <a href="#">Rental@Book.com</a> &emsp; Contact On - 1234567890
+        </p>
+    </footer>
+</body>
+
+</html>
